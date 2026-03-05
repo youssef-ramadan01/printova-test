@@ -9,8 +9,10 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
-import org.springframework.stereotype.Service;
+import jakarta.annotation.PostConstruct;
 
+import org.springframework.stereotype.Service;
+import org.springframework.beans.factory.annotation.Value;
 import java.security.Key;
 import java.util.Date;
 import java.util.HashMap;
@@ -20,11 +22,19 @@ import java.util.function.Function;
 @Service
 public class JwtService {
 
+    @Value("${jwt.access.secret}")
+    private String accessSecret;
 
-    private final Key accessKey;
+    @Value("${jwt.refresh.secret}")
+    private String refreshSecret;
 
-    public JwtService() {
-        this.accessKey = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SecurityConstants.JWT_ACCES_SECRET_KEY));
+    private Key accessKey;
+    private Key refreshKey;
+
+    @PostConstruct
+    public void init() {
+        accessKey = Keys.hmacShaKeyFor(Decoders.BASE64.decode(accessSecret));
+        refreshKey = Keys.hmacShaKeyFor(Decoders.BASE64.decode(refreshSecret));
     }
 
     public String getEmailFromJwtToken(String token) {

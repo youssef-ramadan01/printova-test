@@ -12,6 +12,8 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 import io.jsonwebtoken.io.Decoders;
 import io.jsonwebtoken.security.Keys;
+import jakarta.annotation.PostConstruct;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import java.security.Key;
@@ -23,18 +25,28 @@ import java.util.List;
 public class RefreshTokenServiceImpl implements RefreshTokenService {
 
     private final RefreshTokenRepository refreshTokenRepository;
-    private final Key refreshKey;
+
+    @Value("${jwt.refresh.secret}")
+    private String refreshSecret;
+
+    private Key refreshKey;
 
     public RefreshTokenServiceImpl(RefreshTokenRepository refreshTokenRepository) {
         this.refreshTokenRepository = refreshTokenRepository;
-        this.refreshKey = Keys.hmacShaKeyFor(Decoders.BASE64.decode(SecurityConstants.JWT_REFRESH_SECRET_KEY));
+    }
+
+    @PostConstruct
+    public void init() {
+        this.refreshKey = Keys.hmacShaKeyFor(refreshSecret.getBytes());
     }
 
     @Override
     public String generateRefreshToken(User user) {
         Date expirationDate = new Date(System.currentTimeMillis() + SecurityConstants.JWT_REFRESH_EXPIRATION);
+        HashMap<String, Object> claims = new HashMap<>();
+        claims.put("type", "refresh");
         String token = Jwts.builder()
-                .setClaims(new HashMap<String, Object>() {{ put("type", "refresh"); }})
+                .setClaims(claims)
                 .setSubject(user.getEmail())
                 .setIssuedAt(new Date())
                 .setExpiration(expirationDate)
@@ -48,9 +60,7 @@ public class RefreshTokenServiceImpl implements RefreshTokenService {
                 .expiresAt(expirationDate)
                 .user(user)
                 .build();
-        if (refreshToken != null) {
-            refreshTokenRepository.save(refreshToken);
-        }
+        refreshTokenRepository.save(refreshToken);
         return token;
     }
 

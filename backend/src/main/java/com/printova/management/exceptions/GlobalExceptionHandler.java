@@ -84,34 +84,6 @@ public class GlobalExceptionHandler extends ResponseEntityExceptionHandler {
         return ResponseEntityBuilder.build(apiError);
     }
 
-    @ExceptionHandler(ExpiredVerificationCodeException.class)
-    protected ResponseEntity<Object> handleExpiredVerificationCodeException(ExpiredVerificationCodeException ex) {
-        List<String> details = new ArrayList<>();
-        details.add(ex.getMessage());
-
-        ApiError apiError = ApiError.builder()
-                .timestamp(LocalDateTime.now())
-                .status(HttpStatus.FORBIDDEN.value())
-                .message("Verification code is expired.")
-                .errors(details)
-                .build();
-        return ResponseEntityBuilder.build(apiError);
-    }
-
-    @ExceptionHandler(InvalidVerificationCodeException.class)
-    protected ResponseEntity<Object> handleInvalidVerificationCodeException(InvalidVerificationCodeException ex) {
-        List<String> details = new ArrayList<>();
-        details.add(ex.getMessage());
-
-        ApiError apiError = ApiError.builder()
-                .timestamp(LocalDateTime.now())
-                .status(HttpStatus.BAD_REQUEST.value())
-                .message("Invalid verification code.")
-                .errors(details)
-                .build();
-        return ResponseEntityBuilder.build(apiError);
-    }
-
     @ExceptionHandler(IllegalArgumentException.class)
     protected ResponseEntity<Object> handleIllegalArgumentException(IllegalArgumentException ex) {
         List<String> details = new ArrayList<>();
