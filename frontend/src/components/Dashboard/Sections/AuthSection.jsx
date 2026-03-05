@@ -31,7 +31,7 @@ const AuthSection = () => {
   };
 
   const handleRegister = async () => {
-    const res = await register(registerForm);
+    const res = await register(registerForm.firstName, registerForm.lastName, registerForm.email, registerForm.password, registerForm.phone, registerForm.address);
     setResult(res);
   };
 
