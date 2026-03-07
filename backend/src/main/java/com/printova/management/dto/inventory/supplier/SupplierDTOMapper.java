@@ -1,6 +1,6 @@
 package com.printova.management.dto.inventory.supplier;
 
-import com.printova.management.entity.inventory.Supplier;
+import com.printova.management.model.inventory.Supplier;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

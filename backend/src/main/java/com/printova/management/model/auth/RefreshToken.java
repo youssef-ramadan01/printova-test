@@ -1,6 +1,6 @@
-package com.printova.management.entity.auth;
+package com.printova.management.model.auth;
 
-import com.printova.management.entity.user.User;
+import com.printova.management.model.user.User;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;

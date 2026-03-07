@@ -1,4 +1,4 @@
-package com.printova.management.entity.user;
+package com.printova.management.model.user;
 
 import java.util.HashSet;
 import java.util.Set;

@@ -1,4 +1,4 @@
-package com.printova.management.entity.maintenance;
+package com.printova.management.model.maintenance;
 
 import jakarta.persistence.*;
 import lombok.*;

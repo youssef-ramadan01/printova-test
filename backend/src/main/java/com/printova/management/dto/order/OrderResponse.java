@@ -2,7 +2,7 @@ package com.printova.management.dto.order;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.printova.management.entity.order.OrderStatus;
+import com.printova.management.model.order.OrderStatus;
 import lombok.Builder;
 import lombok.Data;
 

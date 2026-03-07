@@ -1,10 +1,10 @@
 package com.printova.management.service.cart;
 
 import com.printova.management.dto.cart.*;
-import com.printova.management.entity.cart.Cart;
-import com.printova.management.entity.cart.CartItem;
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.inventory.Stock;
+import com.printova.management.model.cart.Cart;
+import com.printova.management.model.cart.CartItem;
+import com.printova.management.model.user.User;
+import com.printova.management.model.inventory.Stock;
 import com.printova.management.repository.cart.CartRepository;
 import com.printova.management.repository.cart.CartItemRepository;
 import com.printova.management.repository.user.UserRepository;

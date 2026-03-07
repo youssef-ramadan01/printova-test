@@ -4,7 +4,7 @@ import com.printova.management.dto.payment.AddPaymentMethodRequest;
 import com.printova.management.dto.payment.PaymentMethodDTO;
 import com.printova.management.dto.payment.PaymentMethodDTOMapper;
 import com.printova.management.dto.payment.UpdatePaymentMethodRequest;
-import com.printova.management.entity.payment.PaymentMethod;
+import com.printova.management.model.payment.PaymentMethod;
 import com.printova.management.repository.payment.PaymentMethodRepository;
 
 import org.springframework.http.ResponseEntity;

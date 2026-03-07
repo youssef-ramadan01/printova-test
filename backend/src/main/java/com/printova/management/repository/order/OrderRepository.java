@@ -1,8 +1,8 @@
 package com.printova.management.repository.order;
 
-import com.printova.management.entity.order.Order;
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.order.OrderStatus;
+import com.printova.management.model.order.Order;
+import com.printova.management.model.user.User;
+import com.printova.management.model.order.OrderStatus;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

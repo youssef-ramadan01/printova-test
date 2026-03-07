@@ -1,8 +1,8 @@
 package com.printova.management.dto.inventory.sparePart;
 
-import com.printova.management.entity.inventory.SparePart;
-import com.printova.management.entity.inventory.PartPrice;
-import com.printova.management.entity.inventory.Stock;
+import com.printova.management.model.inventory.SparePart;
+import com.printova.management.model.inventory.PartPrice;
+import com.printova.management.model.inventory.Stock;
 import com.printova.management.repository.inventory.PartPriceRepository;
 import com.printova.management.repository.inventory.StockRepository;
 import org.springframework.stereotype.Component;

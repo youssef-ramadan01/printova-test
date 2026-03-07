@@ -1,4 +1,4 @@
-package com.printova.management.entity.payment;
+package com.printova.management.model.payment;
 
 import jakarta.persistence.*;
 import lombok.*;

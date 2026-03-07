@@ -1,4 +1,4 @@
-package com.printova.management.entity.order;
+package com.printova.management.model.order;
 
 import jakarta.persistence.*;
 import lombok.*;

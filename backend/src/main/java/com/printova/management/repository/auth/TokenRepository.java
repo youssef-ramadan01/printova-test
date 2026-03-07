@@ -1,6 +1,6 @@
 package com.printova.management.repository.auth;
 
-import com.printova.management.entity.auth.Token;
+import com.printova.management.model.auth.Token;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

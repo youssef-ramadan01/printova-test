@@ -1,6 +1,6 @@
 package com.printova.management.repository.inventory;
 
-import com.printova.management.entity.inventory.Supplier;
+import com.printova.management.model.inventory.Supplier;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.lang.NonNull;
 import java.util.Optional;

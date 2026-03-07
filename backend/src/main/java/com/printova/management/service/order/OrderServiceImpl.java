@@ -1,16 +1,16 @@
 package com.printova.management.service.order;
 
 import com.printova.management.dto.order.*;
-import com.printova.management.entity.cart.Cart;
-import com.printova.management.entity.cart.CartItem;
-import com.printova.management.entity.inventory.ServiceFee;
-import com.printova.management.entity.inventory.Stock;
-import com.printova.management.entity.order.*;
-import com.printova.management.entity.payment.Payment;
-import com.printova.management.entity.payment.PaymentMethod;
-import com.printova.management.entity.payment.PaymentStatus;
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.user.Role;
+import com.printova.management.model.cart.Cart;
+import com.printova.management.model.cart.CartItem;
+import com.printova.management.model.inventory.ServiceFee;
+import com.printova.management.model.inventory.Stock;
+import com.printova.management.model.order.*;
+import com.printova.management.model.payment.Payment;
+import com.printova.management.model.payment.PaymentMethod;
+import com.printova.management.model.payment.PaymentStatus;
+import com.printova.management.model.user.User;
+import com.printova.management.model.user.Role;
 import com.printova.management.repository.cart.CartItemRepository;
 import com.printova.management.repository.cart.CartRepository;
 import com.printova.management.repository.inventory.ServiceFeeRepository;

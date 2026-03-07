@@ -1,4 +1,4 @@
-package com.printova.management.entity.inventory;
+package com.printova.management.model.inventory;
 
 import jakarta.persistence.*;
 import lombok.*;

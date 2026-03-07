@@ -1,7 +1,7 @@
-package com.printova.management.entity.payment;
+package com.printova.management.model.payment;
 
-import com.printova.management.entity.order.Order;
-import com.printova.management.entity.maintenance.Maintenance;
+import com.printova.management.model.order.Order;
+import com.printova.management.model.maintenance.Maintenance;
 
 import jakarta.persistence.*;
 import lombok.*;

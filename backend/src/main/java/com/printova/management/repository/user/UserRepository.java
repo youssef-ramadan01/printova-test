@@ -1,7 +1,7 @@
 package com.printova.management.repository.user;
 
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.user.Role;
+import com.printova.management.model.user.User;
+import com.printova.management.model.user.Role;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Transactional;

@@ -1,6 +1,6 @@
 package com.printova.management.dto.inventory.partPrice;
 
-import com.printova.management.entity.inventory.PartPrice;
+import com.printova.management.model.inventory.PartPrice;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

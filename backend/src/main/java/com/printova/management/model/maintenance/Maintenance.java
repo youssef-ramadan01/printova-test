@@ -1,39 +1,36 @@
-package com.printova.management.entity.order;
+package com.printova.management.model.maintenance;
 
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.payment.PaymentMethod;
+import com.printova.management.model.user.User;
+import com.printova.management.model.payment.PaymentMethod;
 
 import jakarta.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-import java.util.ArrayList;
-import java.util.List;
 
 @Entity
-@Table(name = "orders")
+@Table(name = "maintenance")
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Order {
-
+public class Maintenance {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "order_id")
-    private Long orderId;
+    @Column(name = "maintenance_id")
+    private Long maintenanceId;
 
     // Customer
     @ManyToOne
     @JoinColumn(name = "customer_user_id", nullable = false)
     private User customer;
 
-    // Delivery user
+    // Technician user
     @ManyToOne
-    @JoinColumn(name = "delivery_user_id")
-    private User deliveryUser;
+    @JoinColumn(name = "technician_user_id")
+    private User technicianUser;
 
     // Payment method
     @ManyToOne
@@ -41,8 +38,8 @@ public class Order {
     private PaymentMethod paymentMethod;
 
     @ManyToOne
-    @JoinColumn(name = "order_status_id", nullable = false)
-    private OrderStatus orderStatus;
+    @JoinColumn(name = "maintenance_status_id", nullable = false)
+    private MaintenanceStatus maintenanceStatus;
 
     @Column(name = "total_amount", nullable = false)
     private BigDecimal totalAmount;
@@ -53,18 +50,20 @@ public class Order {
     @Column(name = "service_price", nullable = false)
     private Double servicePrice;
 
-    @Column(name = "order_address", nullable = false)
-    private String orderAddress;
+    @Column(name = "maintenance_address", nullable = false)
+    private String maintAddress;
+
+    @Column(name = "maintenance_date", nullable = false)
+    private LocalDateTime maintDate;
+
+    @Column(name = "maintenance_description", nullable = false)
+    private String maintDescription;
 
     @Column(name = "completed_at")
     private LocalDateTime completedAt;
 
     @Column(name = "created_at", nullable = false)
     private LocalDateTime createdAt;
-
-    @OneToMany(mappedBy = "order", cascade = CascadeType.ALL)
-    @Builder.Default
-    private List<OrderItem> items = new ArrayList<>();
 
     @PrePersist
     protected void onCreate() {

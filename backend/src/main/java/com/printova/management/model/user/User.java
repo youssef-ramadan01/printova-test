@@ -1,6 +1,6 @@
-package com.printova.management.entity.user;
+package com.printova.management.model.user;
 
-import com.printova.management.entity.auth.Token;
+import com.printova.management.model.auth.Token;
 import jakarta.persistence.*;
 import lombok.*;
 import java.util.Collection;

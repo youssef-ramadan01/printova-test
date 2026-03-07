@@ -1,7 +1,7 @@
 package com.printova.management.security.jwt;
 
 import com.printova.management.exceptions.InvalidTokenException;
-import com.printova.management.entity.user.User;
+import com.printova.management.model.user.User;
 import com.printova.management.security.utility.SecurityConstants;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.JwtException;

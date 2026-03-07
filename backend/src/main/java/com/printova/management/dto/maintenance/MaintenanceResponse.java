@@ -2,7 +2,7 @@ package com.printova.management.dto.maintenance;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.printova.management.entity.maintenance.MaintenanceStatus;
+import com.printova.management.model.maintenance.MaintenanceStatus;
 import lombok.Builder;
 import lombok.Data;
 

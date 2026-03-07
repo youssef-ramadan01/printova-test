@@ -3,8 +3,8 @@ package com.printova.management.service.inventory.stock;
 import com.printova.management.dto.inventory.stock.StockDTO;
 import com.printova.management.dto.inventory.stock.AdjustStockRequest;
 import com.printova.management.dto.inventory.stock.UpdateStockRequest;
-import com.printova.management.entity.inventory.SparePart;
-import com.printova.management.entity.inventory.Stock;
+import com.printova.management.model.inventory.SparePart;
+import com.printova.management.model.inventory.Stock;
 import com.printova.management.repository.inventory.StockRepository;
 import com.printova.management.repository.inventory.SparePartRepository;
 

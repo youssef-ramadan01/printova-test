@@ -1,8 +1,8 @@
 package com.printova.management.repository.maintenance;
 
-import com.printova.management.entity.maintenance.Maintenance;
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.maintenance.MaintenanceStatus;
+import com.printova.management.model.maintenance.Maintenance;
+import com.printova.management.model.user.User;
+import com.printova.management.model.maintenance.MaintenanceStatus;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;

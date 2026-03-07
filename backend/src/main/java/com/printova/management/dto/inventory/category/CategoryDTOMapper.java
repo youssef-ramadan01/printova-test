@@ -1,6 +1,6 @@
 package com.printova.management.dto.inventory.category;
 
-import com.printova.management.entity.inventory.Category;
+import com.printova.management.model.inventory.Category;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

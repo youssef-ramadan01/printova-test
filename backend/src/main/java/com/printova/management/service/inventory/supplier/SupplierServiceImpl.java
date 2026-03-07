@@ -4,7 +4,7 @@ import com.printova.management.dto.inventory.supplier.AddSupplierRequest;
 import com.printova.management.dto.inventory.supplier.SupplierDTO;
 import com.printova.management.dto.inventory.supplier.SupplierDTOMapper;
 import com.printova.management.dto.inventory.supplier.UpdateSupplierRequest;
-import com.printova.management.entity.inventory.Supplier;
+import com.printova.management.model.inventory.Supplier;
 import com.printova.management.repository.inventory.SupplierRepository;
 
 import org.springframework.http.ResponseEntity;

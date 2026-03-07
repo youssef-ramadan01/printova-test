@@ -1,8 +1,8 @@
 package com.printova.management.repository.payment;
 
-import com.printova.management.entity.payment.Payment;
-import com.printova.management.entity.maintenance.Maintenance;
-import com.printova.management.entity.order.Order;
+import com.printova.management.model.payment.Payment;
+import com.printova.management.model.maintenance.Maintenance;
+import com.printova.management.model.order.Order;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

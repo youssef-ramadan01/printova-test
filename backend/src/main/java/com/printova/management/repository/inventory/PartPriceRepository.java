@@ -1,6 +1,6 @@
 package com.printova.management.repository.inventory;
 
-import com.printova.management.entity.inventory.PartPrice;
+import com.printova.management.model.inventory.PartPrice;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 import java.util.List;

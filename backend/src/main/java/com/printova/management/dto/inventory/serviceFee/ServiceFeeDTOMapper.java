@@ -1,6 +1,6 @@
 package com.printova.management.dto.inventory.serviceFee;
 
-import com.printova.management.entity.inventory.ServiceFee;
+import com.printova.management.model.inventory.ServiceFee;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

@@ -2,8 +2,8 @@ package com.printova.management.service.user;
 
 import com.printova.management.dto.user.UserDTO;
 import com.printova.management.dto.user.UpdateUserRequest;
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.user.Role;
+import com.printova.management.model.user.User;
+import com.printova.management.model.user.Role;
 import com.printova.management.repository.user.UserRepository;
 import com.printova.management.repository.user.RoleRepository;
 import com.printova.management.dto.user.UserDTOMapper;

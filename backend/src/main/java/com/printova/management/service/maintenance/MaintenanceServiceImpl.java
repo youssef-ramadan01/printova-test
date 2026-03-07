@@ -1,13 +1,13 @@
 package com.printova.management.service.maintenance;
 
 import com.printova.management.dto.maintenance.*;
-import com.printova.management.entity.inventory.ServiceFee;
-import com.printova.management.entity.maintenance.*;
-import com.printova.management.entity.payment.Payment;
-import com.printova.management.entity.payment.PaymentMethod;
-import com.printova.management.entity.payment.PaymentStatus;
-import com.printova.management.entity.user.User;
-import com.printova.management.entity.user.Role;
+import com.printova.management.model.inventory.ServiceFee;
+import com.printova.management.model.maintenance.*;
+import com.printova.management.model.payment.Payment;
+import com.printova.management.model.payment.PaymentMethod;
+import com.printova.management.model.payment.PaymentStatus;
+import com.printova.management.model.user.User;
+import com.printova.management.model.user.Role;
 import com.printova.management.repository.inventory.ServiceFeeRepository;
 import com.printova.management.repository.maintenance.MaintenanceRepository;
 import com.printova.management.repository.maintenance.MaintenanceStatusRepository;

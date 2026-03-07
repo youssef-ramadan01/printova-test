@@ -1,6 +1,6 @@
-package com.printova.management.entity.cart;
+package com.printova.management.model.cart;
 
-import com.printova.management.entity.inventory.Stock;
+import com.printova.management.model.inventory.Stock;
 import jakarta.persistence.*;
 import lombok.*;
 

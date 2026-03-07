@@ -1,15 +1,15 @@
 package com.printova.management.security.configuration;
 
-import com.printova.management.entity.inventory.ServiceFee;
-import com.printova.management.entity.maintenance.MaintenanceStatus;
-import com.printova.management.entity.order.OrderStatus;
-import com.printova.management.entity.payment.PaymentMethod;
-import com.printova.management.entity.payment.PaymentStatus;
-import com.printova.management.entity.inventory.Category;
-import com.printova.management.entity.inventory.PartPrice;
-import com.printova.management.entity.inventory.Supplier;
-import com.printova.management.entity.inventory.SparePart;
-import com.printova.management.entity.inventory.Stock;
+import com.printova.management.model.inventory.ServiceFee;
+import com.printova.management.model.maintenance.MaintenanceStatus;
+import com.printova.management.model.order.OrderStatus;
+import com.printova.management.model.payment.PaymentMethod;
+import com.printova.management.model.payment.PaymentStatus;
+import com.printova.management.model.inventory.Category;
+import com.printova.management.model.inventory.PartPrice;
+import com.printova.management.model.inventory.Supplier;
+import com.printova.management.model.inventory.SparePart;
+import com.printova.management.model.inventory.Stock;
 import com.printova.management.repository.inventory.ServiceFeeRepository;
 import com.printova.management.repository.maintenance.MaintenanceStatusRepository;
 import com.printova.management.repository.order.OrderStatusRepository;
@@ -211,17 +211,17 @@ public class SystemDataInitializer implements CommandLineRunner {
 
     // ================= PARTS =================
     private void initializeParts() {
-        createPartIfNotExists("HP 12A Toner Cartridge", "Black toner cartridge for HP LaserJet 1010/1020 series", "Toner & Ink", "sales@hpdist.com", new BigDecimal("1850.00"));
-        createPartIfNotExists("Canon IR2200 Fuser Assembly", "Complete fuser unit for Canon IR2200 printer", "Fuser Assembly", "contact@canonparts.com", new BigDecimal("7800.00"));
-        createPartIfNotExists("Epson L360 Maintenance Box", "Waste ink maintenance box for Epson L360", "Maintenance Kit", "orders@epsonparts.com", new BigDecimal("950.00"));
-        createPartIfNotExists("HP Pickup Roller RL1-0540", "Paper pickup roller for HP LaserJet P1005", "Rollers", "sales@hpdist.com", new BigDecimal("320.00"));
-        createPartIfNotExists("Canon IR2520 Drum Unit", "Drum unit compatible with Canon IR2520", "Drum Unit", "contact@canonparts.com", new BigDecimal("4200.00"));
-        createPartIfNotExists("HP Formatter Board CC388-60001", "Main formatter board for HP LaserJet P1102", "Formatter & Boards", "sales@hpdist.com", new BigDecimal("5200.00"));
-        createPartIfNotExists("Universal Pressure Roller", "Pressure roller compatible with multiple laser printers", "Rollers", "info@uniprintparts.com", new BigDecimal("480.00"));
-        createPartIfNotExists("Epson L805 Printhead", "Original printhead for Epson L805 inkjet printer", "Formatter & Boards", "orders@epsonparts.com", new BigDecimal("6900.00"));
+        createPartIfNotExists("HP 12A Toner Cartridge", "Black toner cartridge for HP LaserJet 1010/1020 series", "Toner & Ink", "sales@hpdist.com", new BigDecimal("1850.00"), 52);
+        createPartIfNotExists("Canon IR2200 Fuser Assembly", "Complete fuser unit for Canon IR2200 printer", "Fuser Assembly", "contact@canonparts.com", new BigDecimal("7800.00"), 0);
+        createPartIfNotExists("Epson L360 Maintenance Box", "Waste ink maintenance box for Epson L360", "Maintenance Kit", "orders@epsonparts.com", new BigDecimal("950.00"), 8);
+        createPartIfNotExists("HP Pickup Roller RL1-0540", "Paper pickup roller for HP LaserJet P1005", "Rollers", "sales@hpdist.com", new BigDecimal("320.00"), 35);
+        createPartIfNotExists("Canon IR2520 Drum Unit", "Drum unit compatible with Canon IR2520", "Drum Unit", "contact@canonparts.com", new BigDecimal("4200.00"), 26);
+        createPartIfNotExists("HP Formatter Board CC388-60001", "Main formatter board for HP LaserJet P1102", "Formatter & Boards", "sales@hpdist.com", new BigDecimal("5200.00"), 0);
+        createPartIfNotExists("Universal Pressure Roller", "Pressure roller compatible with multiple laser printers", "Rollers", "info@uniprintparts.com", new BigDecimal("480.00"), 46);
+        createPartIfNotExists("Epson L805 Printhead", "Original printhead for Epson L805 inkjet printer", "Formatter & Boards", "orders@epsonparts.com", new BigDecimal("6900.00"), 60);
     }
 
-    private void createPartIfNotExists(String partName, String partDescription, String categoryName, String supplierEmail, BigDecimal initialPrice) {
+    private void createPartIfNotExists(String partName, String partDescription, String categoryName, String supplierEmail, BigDecimal initialPrice, Integer initialStock) {
 
         sparePartRepository.findByPartNameIgnoreCase(partName)
                 .orElseGet(() -> {
@@ -253,7 +253,7 @@ public class SystemDataInitializer implements CommandLineRunner {
 
                     Stock stock = Stock.builder()
                             .part(savedPart)
-                            .stockQuantity(0)
+                            .stockQuantity(initialStock)
                             .build();
 
                     stockRepository.save(stock);

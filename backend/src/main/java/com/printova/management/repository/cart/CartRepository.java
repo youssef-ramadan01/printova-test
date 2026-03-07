@@ -1,7 +1,7 @@
 package com.printova.management.repository.cart;
 
-import com.printova.management.entity.cart.Cart;
-import com.printova.management.entity.user.User;
+import com.printova.management.model.cart.Cart;
+import com.printova.management.model.user.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 import java.util.Optional;
 

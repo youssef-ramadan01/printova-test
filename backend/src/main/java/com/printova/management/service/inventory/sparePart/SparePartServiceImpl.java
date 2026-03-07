@@ -1,10 +1,10 @@
 package com.printova.management.service.inventory.sparePart;
 
-import com.printova.management.entity.inventory.SparePart;
-import com.printova.management.entity.inventory.Stock;
-import com.printova.management.entity.inventory.Category;
-import com.printova.management.entity.inventory.Supplier;
-import com.printova.management.entity.inventory.PartPrice;
+import com.printova.management.model.inventory.SparePart;
+import com.printova.management.model.inventory.Stock;
+import com.printova.management.model.inventory.Category;
+import com.printova.management.model.inventory.Supplier;
+import com.printova.management.model.inventory.PartPrice;
 import com.printova.management.dto.inventory.sparePart.AddSparePartRequest;
 import com.printova.management.dto.inventory.sparePart.SparePartDTO;
 import com.printova.management.dto.inventory.sparePart.SparePartDTOMapper;

@@ -4,7 +4,7 @@ import com.printova.management.dto.inventory.serviceFee.AddServiceFeeRequest;
 import com.printova.management.dto.inventory.serviceFee.ServiceFeeDTO;
 import com.printova.management.dto.inventory.serviceFee.ServiceFeeDTOMapper;
 import com.printova.management.dto.inventory.serviceFee.UpdateServiceFeeRequest;
-import com.printova.management.entity.inventory.ServiceFee;
+import com.printova.management.model.inventory.ServiceFee;
 import com.printova.management.repository.inventory.ServiceFeeRepository;
 
 import org.springframework.http.ResponseEntity;

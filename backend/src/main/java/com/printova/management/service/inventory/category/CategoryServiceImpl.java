@@ -4,7 +4,7 @@ import com.printova.management.dto.inventory.category.AddCategoryRequest;
 import com.printova.management.dto.inventory.category.CategoryDTO;
 import com.printova.management.dto.inventory.category.CategoryDTOMapper;
 import com.printova.management.dto.inventory.category.UpdateCategoryRequest;
-import com.printova.management.entity.inventory.Category;
+import com.printova.management.model.inventory.Category;
 import com.printova.management.repository.inventory.CategoryRepository;
 
 import org.springframework.http.ResponseEntity;

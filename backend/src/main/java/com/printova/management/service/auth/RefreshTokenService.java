@@ -1,7 +1,7 @@
 package com.printova.management.service.auth;
 
-import com.printova.management.entity.auth.RefreshToken;
-import com.printova.management.entity.user.User;
+import com.printova.management.model.auth.RefreshToken;
+import com.printova.management.model.user.User;
 
 import java.util.List;
 

@@ -1,6 +1,6 @@
 package com.printova.management.repository.auth;
 
-import com.printova.management.entity.auth.RefreshToken;
+import com.printova.management.model.auth.RefreshToken;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;

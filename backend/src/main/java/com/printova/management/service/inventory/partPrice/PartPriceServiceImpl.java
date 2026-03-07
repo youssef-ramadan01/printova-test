@@ -1,7 +1,7 @@
 package com.printova.management.service.inventory.partPrice;
 
-import com.printova.management.entity.inventory.SparePart;
-import com.printova.management.entity.inventory.PartPrice;
+import com.printova.management.model.inventory.SparePart;
+import com.printova.management.model.inventory.PartPrice;
 import com.printova.management.dto.inventory.partPrice.PartPriceDTOMapper;
 import com.printova.management.dto.inventory.partPrice.AddPartPriceRequest;
 import com.printova.management.dto.inventory.partPrice.PartPriceDTO;

@@ -1,7 +1,7 @@
 package com.printova.management.service.payment;
 
 import com.printova.management.dto.payment.*;
-import com.printova.management.entity.payment.Payment;
+import com.printova.management.model.payment.Payment;
 import com.printova.management.repository.payment.PaymentRepository;
 
 import org.springframework.http.ResponseEntity;

@@ -1,6 +1,6 @@
 package com.printova.management.dto.payment;
 
-import com.printova.management.entity.payment.PaymentMethod;
+import com.printova.management.model.payment.PaymentMethod;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

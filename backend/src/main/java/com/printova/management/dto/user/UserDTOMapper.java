@@ -1,6 +1,6 @@
 package com.printova.management.dto.user;
 
-import com.printova.management.entity.user.User;
+import com.printova.management.model.user.User;
 import org.springframework.stereotype.Component;
 
 import java.util.function.Function;

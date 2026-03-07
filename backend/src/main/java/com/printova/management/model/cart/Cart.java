@@ -1,7 +1,7 @@
-package com.printova.management.entity.cart;
+package com.printova.management.model.cart;
 
 
-import com.printova.management.entity.user.User;
+import com.printova.management.model.user.User;
 import jakarta.persistence.*;
 import lombok.*;
 
